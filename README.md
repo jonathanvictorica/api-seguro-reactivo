@@ -1,2 +1,2 @@
-# api-seguro-reactivo
-Proyecto Reactivo WebFlux Java + JPA Reactivo 
+# Descripción
+Este proyecto es una demostración de una aplicación reactiva en Java utilizando Spring Boot y R2DBC para interactuar con una base de datos relacional de forma reactiva. Proporciona un ejemplo básico de cómo construir una API RESTful reactiva que maneja operaciones CRUD sobre entidades de seguros.
