@@ -1,0 +1,19 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/api_seguros
+    username: api_seguros_user
+    password: api_seguros_pass
+    pool:
+      initial-size: 10
+      max-size: 20
+
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
+#OpenAPI Properties
+springdoc:
+  api-docs:
+    swagger-ui:
+      path: /swagger-ui.html
+  enabled: true
