@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "30d74ac8-4a03-4157-82db-b25e8c573cf5",
+		"name": "api-seguros-reactivo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24417398",
+		"_collection_link": "https://avla-artico.postman.co/workspace/Team-Workspace~3c08e892-642e-4378-82e7-129923e40db8/collection/24417398-30d74ac8-4a03-4157-82db-b25e8c573cf5?action=share&source=collection_link&creator=24417398"
+	},
+	"item": [
+		{
+			"name": "LIST-POLICY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://a76272ae38e7340db99b5f76179fe467-1457435910.us-east-1.elb.amazonaws.com/api/v1/policy/search",
+					"protocol": "http",
+					"host": [
+						"a76272ae38e7340db99b5f76179fe467-1457435910",
+						"us-east-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"policy",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST-POLICY",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"policyNumber\": \"134\",\r\n    \"dateInit\": \"2022-03-30\",\r\n    \"dateEnd\": \"2023-03-30\",\r\n    \"dateEmission\": \"2022-03-30T10:00:00\",\r\n    \"insured\": [\r\n        {\r\n            \"documentType\": \"DNI\",\r\n            \"documentValue\": \"12345678\",\r\n            \"name\": \"Juan Pérez\",\r\n            \"orderInsured\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://a76272ae38e7340db99b5f76179fe467-1457435910.us-east-1.elb.amazonaws.com/api/v1/policy",
+					"protocol": "http",
+					"host": [
+						"a76272ae38e7340db99b5f76179fe467-1457435910",
+						"us-east-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"policy"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

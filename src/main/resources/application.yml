@@ -1,8 +1,9 @@
+
 spring:
   r2dbc:
-    url: r2dbc:postgresql://localhost:5432/api_seguros
-    username: api_seguros_user
-    password: api_seguros_pass
+    url: ${BD_URL}
+    username: ${BD_USER}
+    password: ${BD_PASS}
     pool:
       initial-size: 10
       max-size: 20
@@ -17,3 +18,5 @@ springdoc:
     swagger-ui:
       path: /swagger-ui.html
   enabled: true
+server:
+  port: 8020

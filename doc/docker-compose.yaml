@@ -5,7 +5,7 @@ services:
     image: postgres:latest
     container_name: my_postgresql_db
     environment:
-      POSTGRES_DB: api_seguros
+      POSTGRES_DB: jmg_api_seguros_dev
       POSTGRES_USER: api_seguros_user
       POSTGRES_PASSWORD: api_seguros_pass
     ports:

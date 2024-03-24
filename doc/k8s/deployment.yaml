@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-seguros-jmg
+  # labels so that we can bind a Service to this Pod
+  labels:
+    app: api-seguros-jmg
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-seguros-jmg
+  template:
+    metadata:
+      labels:
+        app: api-seguros-jmg
+    spec:
+      containers:
+        - name: api-seguros-jmg
+          image: jonathanvictorica/api-seguros-jmg:v1
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: "500m" #half the CPU free: 0.5 Core
+              memory: "256Mi"
+            limits:
+              cpu: "1000m" #max 1.0 Core
+              memory: "512Mi"
+          env:
+            - name: BD_URL
+              value: r2dbc:postgresql://jmg-api-seguros-dev.clu6q0mui87d.us-east-1.rds.amazonaws.com:5432/jmg_api_seguros_dev
+            - name: BD_USER
+              value: api_seguros_user
+            - name: BD_PASS
+              value: api_seguros_pass
+          ports:
+            - containerPort: 8020
+              name: http
+              protocol: TCP
